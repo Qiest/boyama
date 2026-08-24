@@ -33,3 +33,10 @@ export default function App(){
 function Shell({children}){return <main className="shell">{children}</main>} function Card({children}){return <section className="card">{children}</section>} function Err({t}){return t?<div className="error">{t}</div>:null} function Footer(){return <footer>Made in — Esonun hayranı</footer>}
 function dataUrl(f){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f)})}
 function msg(e){return e.message==="NAME_TAKEN"?"Bu isim bu odada zaten kullanılıyor.":e.message==="ROOM_NOT_FOUND"?"Bu oda bulunamadı.":"Bir hata oluştu. Tekrar dene."}
+import ReactDOM from "react-dom/client";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
