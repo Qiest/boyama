@@ -1,0 +1,1 @@
+import {defineConfig} from "vite";import react from "@vitejs/plugin-react";import {VitePWA} from "vite-plugin-pwa";export default defineConfig({plugins:[react(),VitePWA({registerType:"autoUpdate",manifest:{name:"Mandala Boyama",short_name:"Boyama",display:"standalone",orientation:"landscape"}})],server:{host:true,port:5173}});
